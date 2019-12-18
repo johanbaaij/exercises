@@ -1,6 +1,9 @@
-task default: %w[test]
+require 'rake/testtask'
 
-desc "Run test suite"
-task :test do
-  ruby "witness_of_the_tall_people/tc_tall_witness.rb"
+Rake::TestTask.new(:test) do |t|
+  t.libs << 'test'
+  t.libs << 'lib'
+  t.test_files = FileList['test/**/*_test.rb']
 end
+
+task default: :test
