@@ -1,7 +1,7 @@
-require_relative 'tall_witness'
-require 'test/unit'
+require_relative '../lib/tall_witness/tall_witness.rb'
+require 'minitest/autorun'
 
-class TestTallWitness < Test::Unit::TestCase
+class TestTallWitness < Minitest::Test
   def test_tall_witness
     assert_equal(3, TallWitness.new([3, 6, 3, 4, 1]).witnesses)
     assert_equal(2, TallWitness.new([6, 3, 3, 3, 3]).witnesses)
