@@ -29,3 +29,5 @@ matrix = [
 print word_search(matrix, 'FOAM')
 # True
 ```
+
+Source: http://www.dailyinterviewpro.com/ Newsletter (11-12-2019)
