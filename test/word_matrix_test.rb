@@ -8,6 +8,8 @@ class TestWordMatrix < Minitest::Test
       ['O', 'B', 'Q', 'P'],
       ['A', 'N', 'O', 'B'],
       ['M', 'A', 'S', 'S']]
+    assert(WordMatrix.new(matrix).find('FACI'))
     assert(WordMatrix.new(matrix).find('FOAM'))
+    assert(WordMatrix.new(matrix).find('OBQP'))
   end
 end
